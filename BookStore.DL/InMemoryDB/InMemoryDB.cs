@@ -2,20 +2,20 @@
 
 namespace BookStore.DL.InMemoryDB
 {
-    public class InMemoryDB
+    public static class InMemoryDB
     {
-        public List<Author>Authors = new List<Author> ()
+        public static List<Author> Authors = new List<Author>()
         {
             new Author()
             {
-                ID = 1,
+                Id = 1,
                 Name = "Pesho"
-            }
+            },
             new Author()
             {
-                ID = 2,
+                Id = 2,
                 Name = "Stamat"
-            }      
-        }
+            }
+        };
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore.BL.Services
+namespace BookStore.BL.Interfaces
 {
-    internal interface IAuthorServices
+    internal class IBookService
     {
     }
 }

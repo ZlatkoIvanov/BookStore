@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore.DL.Repositories.InMemoryRepositories
+namespace BookStore.BL.Services
 {
-    internal class AuthorRepository
+    internal class BookService
     {
     }
 }
