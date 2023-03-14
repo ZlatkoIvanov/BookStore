@@ -1,15 +1,14 @@
 ﻿using BookStore.Models.Data;
-using BookStore.Models.Request;
 
-namespace BookStore.BL.Interfaces
+namespace BookStore.DL.Interfaces
 {
-    public interface IBookService
+    public interface IBookRepository
     {
         IEnumerable<Book> GetAll();
 
         Book GetById(int id);
 
-        void Add(AddBookRequest author);
+        void Add(Book author);
 
         void Delete(int id);
     }

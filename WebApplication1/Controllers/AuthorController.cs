@@ -1,34 +1,27 @@
 using BookStore.BL.Interfaces;
-using BookStore.BL.Services;
-using BookStore.Model.Base;
+using BookStore.Models.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookStore.Controllers
+namespace BookStoreB.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class AuthorController : ControllerBase
     {
-        private readonly ILogger<AuthorController> _logger;
         private readonly IAuthorService _authorService;
 
-
-        public AuthorController(
-            ILogger<AuthorController> logger,
-            IAuthorService authorService)
+        public AuthorController(IAuthorService authorService)
         {
-            _logger = logger;
             _authorService = authorService;
-       
         }
 
-        [HttpGet("GetAllAuthors")]
+        [HttpGet("GetAll")]
         public IEnumerable<Author> GetAll()
         {
             return _authorService.GetAll();
         }
 
-        [HttpGet("GetId")]
+        [HttpGet("GetById")]
         public Author GetById(int id)
         {
             return _authorService.GetById(id);
@@ -37,7 +30,13 @@ namespace BookStore.Controllers
         [HttpPost("Add")]
         public void Add([FromBody] Author author)
         {
-            _authorService.Add(author);
+            _authorService.AddAuthor(author);
+        }
+
+        [HttpDelete("Delete")]
+        public void Delete(int authorId)
+        {
+            _authorService.DeleteAuthor(authorId);
         }
     }
 }

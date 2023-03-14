@@ -1,7 +1,6 @@
 ﻿using BookStore.BL.Interfaces;
 using BookStore.DL.Interfaces;
-using BookStore.Model.Base;
-
+using BookStore.Models.Data;
 
 namespace BookStore.BL.Services
 {
@@ -24,19 +23,14 @@ namespace BookStore.BL.Services
             return _authorRepository.GetById(id);
         }
 
-        public void Add(Author author)
+        public void AddAuthor(Author author)
         {
-            _authorRepository.Add(author);
+            _authorRepository.AddAuthor(author);
         }
 
-        public IAuthorService GetByID(int id)
+        public void DeleteAuthor(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        IAuthorService IAuthorService.GetById(int id)
-        {
-            throw new NotImplementedException();
+            _authorRepository.DeleteAuthor(id);
         }
     }
 }

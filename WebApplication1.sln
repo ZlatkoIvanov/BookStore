@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{B206FB17-5097-4FB9-98EA-964EFB5C2E1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreB", "WebApplication1\BookStoreB.csproj", "{B206FB17-5097-4FB9-98EA-964EFB5C2E1B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.BL", "BookStore.BL\BookStore.BL.csproj", "{C3EA867B-E22C-42DD-A04D-FA288D8FF74E}"
 EndProject

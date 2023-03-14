@@ -1,11 +1,15 @@
-﻿using BookStore.Model.Base;
+﻿using BookStore.Models.Data;
 
 namespace BookStore.BL.Interfaces
 {
     public interface IAuthorService
     {
         IEnumerable<Author> GetAll();
+
         Author GetById(int id);
-        void Add(Author author);
+
+        void AddAuthor(Author author);
+
+        void DeleteAuthor(int id);
     }
 }
