@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BookStore.Models.Data;
 
 namespace BookStore.AutoMapper
 {
@@ -7,6 +8,7 @@ namespace BookStore.AutoMapper
         public AutoMapperProfile()
         {
             CreateMap<AddAuthorRequest, Author>();
+            CreateMap<UpdateAuthorRequest, Author>();
         }
     }
 }
