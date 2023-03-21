@@ -1,16 +1,21 @@
-﻿using BookStore.BL.Interfaces;
+﻿using AutoMapper;
+using BookStore.BL.Interfaces;
 using BookStore.DL.Interfaces;
-using BookStore.Models.Data;
+using BookStore.Models.Models;
+using BookStore.Models.Requests;
 
 namespace BookStore.BL.Services
 {
     public class AuthorService : IAuthorService
     {
         private readonly IAuthorRepository _authorRepository;
+        private readonly IMapper _mapper;
 
-        public AuthorService(IAuthorRepository authorRepository)
+        public AuthorService(IAuthorRepository authorRepository,
+            IMapper mapper)
         {
             _authorRepository = authorRepository;
+            _mapper = mapper;
         }
 
         public IEnumerable<Author> GetAll()
@@ -23,14 +28,23 @@ namespace BookStore.BL.Services
             return _authorRepository.GetById(id);
         }
 
-        public void AddAuthor(Author author)
+        public void Add(AddAuthorRequest authorRequest)
         {
-            _authorRepository.AddAuthor(author);
+            var author =
+                _mapper.Map<Author>(authorRequest);
+
+            _authorRepository.Add(author);
         }
 
-        public void DeleteAuthor(int id)
+        public void Delete(int id)
         {
-            _authorRepository.DeleteAuthor(id);
+            _authorRepository.Delete(id);
+        }
+
+        public void Update(UpdateAuthorRequest authorRequest)
+        {
+            var author = _mapper.Map<Author>(authorRequest);
+            _authorRepository.Update(author);
         }
     }
 }

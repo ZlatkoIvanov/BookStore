@@ -1,5 +1,4 @@
-﻿using BookStore.Models.Data;
-using BookStore.Models.Request;
+﻿using BookStore.Models.Models;
 
 namespace BookStore.BL.Interfaces
 {
@@ -9,8 +8,10 @@ namespace BookStore.BL.Interfaces
 
         Book GetById(int id);
 
-        void Add(AddBookRequest author);
+        void Add(Book author);
 
         void Delete(int id);
+
+        void Update(Book book);
     }
 }

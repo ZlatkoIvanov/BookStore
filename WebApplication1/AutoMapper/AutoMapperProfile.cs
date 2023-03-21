@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using BookStore.Models.Data;
+using BookStore.Models.Models;
+using BookStore.Models.Requests;
 
 namespace BookStore.AutoMapper
 {

@@ -1,9 +1,10 @@
 ﻿using BookStore.Models.Responses;
 
-namespce BookStore.BL.Interfaces
-    
-    public interface ILibraryService
+namespace BookStore.BL.Interfaces
 {
-    GetAllBooksByAuthorResponse
-        GetAllBooksByAuthorId(int authorId);
+    public interface ILibraryService
+    {
+        GetAllBooksByAuthorResponse
+            GetAllBooksByAuthorId(int authorId);
+    }
 }

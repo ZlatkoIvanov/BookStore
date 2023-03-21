@@ -1,4 +1,4 @@
-﻿namespace BookStore.Models.Data
+﻿namespace BookStore.Models.Base
 {
     public class Person
     {

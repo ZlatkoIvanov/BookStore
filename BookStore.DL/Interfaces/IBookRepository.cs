@@ -1,4 +1,4 @@
-﻿using BookStore.Models.Data;
+﻿using BookStore.Models.Models;
 
 namespace BookStore.DL.Interfaces
 {
@@ -11,5 +11,9 @@ namespace BookStore.DL.Interfaces
         void Add(Book author);
 
         void Delete(int id);
+
+        void Update(Book author);
+
+        IEnumerable<Book> GetAllByAuthorId(int authorId);
     }
 }
